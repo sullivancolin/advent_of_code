@@ -1,0 +1,8 @@
+.python-version
+.ipynb_checkpoints/
+
+*.pyc
+
+.mypy_cache
+.pytest_cache
+.vscode
