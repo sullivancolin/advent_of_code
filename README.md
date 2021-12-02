@@ -7,6 +7,7 @@ Clone the repo and open in [VScode](https://code.visualstudio.com/).  VScode wil
 
 ### Using Binder
 Click the button below to build an image with all the dependencies installed with a jupyter environment in the browser.
+
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sullivancolin/advent_of_code.git/HEAD)
 
 ### Manually
