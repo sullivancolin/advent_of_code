@@ -1,5 +1,5 @@
-from .day1_part1 import number_depth_increases
-from .day1_part2 import number_window_sum_increased
+from advent_of_code.day1.part1 import number_depth_increases
+from advent_of_code.day1.part2 import number_window_sum_increased
 
 
 def test_number_increases() -> None:

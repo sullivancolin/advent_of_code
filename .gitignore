@@ -6,3 +6,5 @@
 .mypy_cache
 .pytest_cache
 .vscode
+htmlcov
+.DS_Store

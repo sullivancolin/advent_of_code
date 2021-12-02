@@ -34,24 +34,18 @@ Consider sums of a three-measurement sliding window. How many sums are larger th
 
 
 def number_window_sum_increased(depths: list[int]) -> int:
-
     number_increased = 0
-
     triples = zip(depths, depths[1:], depths[2:])
-
     triple_sums = [sum(triple) for triple in triples]
-
     sum_pairs = zip(triple_sums, triple_sums[1:])
-
     for first, second in sum_pairs:
         if second > first:
             number_increased += 1
-
     return number_increased
 
 
 if __name__ == "__main__":
-    with open("depths.txt") as infile:
+    with open("data/day1.txt") as infile:
         depths = [int(line.strip()) for line in infile]
 
     increased = number_window_sum_increased(depths)

@@ -18,18 +18,15 @@ In this example, there are 7 measurements that are larger than the previous meas
 
 def number_depth_increases(depths: list[int]) -> int:
     pairs = zip(depths, depths[1:])
-
     num_increased = 0
-
     for first, second in pairs:
         if second > first:
             num_increased += 1
-
     return num_increased
 
 
 if __name__ == "__main__":
-    with open("depths.txt") as infile:
+    with open("data/day1.txt") as infile:
         depths = [int(line.strip()) for line in infile]
 
     increased = number_depth_increases(depths)
