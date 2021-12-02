@@ -5,6 +5,10 @@
 ### Using the `devcontainter`
 Clone the repo and open in [VScode](https://code.visualstudio.com/).  VScode will recognize the presence of devcontainer configuration and prompt you reopen the repository inside the container after building the Docker Image.   Afterwards simply install dependencies with `poetry install`
 
+### Using Binder
+Click the button below to build an image with all the dependencies installed with a jupyter environment in the browser.
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sullivancolin/advent_of_code.git/HEAD)
+
 ### Manually
 Before installing dependencies please make sure you have a distribution of
 [python 3.10](https://www.python.org/downloads/release/python-3100/) available and installed [poetry](https://python-poetry.org/).  To install dependencies create a new virtual environment and install with `poetry install`
