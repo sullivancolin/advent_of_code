@@ -22,3 +22,5 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 USER vscode
 RUN curl -sSL https://install.python-poetry.org | python -
 ENV PATH "/home/vscode/.local/bin:$PATH"
+COPY requirements.txt ./
+RUN pip install --upgrade pip && pip install -r requirements.txt

@@ -32,7 +32,10 @@ In this example, there are 5 sums that are larger than the previous sum.
 Consider sums of a three-measurement sliding window. How many sums are larger than the previous sum?
 """
 
+from .part1 import number_depths_increased
 
+
+# Original Anwser
 def number_window_sum_increased(depths: list[int]) -> int:
     number_increased = 0
     triples = zip(depths, depths[1:], depths[2:])
@@ -48,5 +51,5 @@ if __name__ == "__main__":
     with open("data/day1.txt") as infile:
         depths = [int(line.strip()) for line in infile]
 
-    increased = number_window_sum_increased(depths)
+    increased = number_depths_increased(depths, gap=4)
     print(increased)
