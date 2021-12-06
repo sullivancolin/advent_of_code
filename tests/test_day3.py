@@ -1,6 +1,7 @@
+import pytest
+
 from advent_of_code.day3.part1 import get_pressure
 from advent_of_code.day3.part2 import get_life_support
-import pytest
 
 
 @pytest.fixture

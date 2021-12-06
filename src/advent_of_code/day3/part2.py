@@ -33,11 +33,13 @@ Finally, to find the life support rating, multiply the oxygen generator rating (
 Use the binary numbers in your diagnostic report to calculate the oxygen generator rating and CO2 scrubber rating, then multiply them together. What is the life support rating of the submarine? (Be sure to represent your answer in decimal, not binary.)
 """
 
-from .part1 import parse_file
+import numpy as np
 import pandas as pd
 
+from .part1 import parse_file
 
-def iteratively_filter_df(df, most=True) -> list[int]:
+
+def iteratively_filter_df(df, most=True) -> np.ndarray:
     for col in df.columns:
         if len(df) == 1:
             break
