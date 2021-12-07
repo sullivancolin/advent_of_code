@@ -29,7 +29,6 @@ def test_update_state():
 
 @pytest.mark.parametrize("board,expected", zip(state_boards, row_expected))
 def test_check_rows(board: np.ndarray, expected: bool) -> None:
-
     assert check_rows(board) == expected
 
 

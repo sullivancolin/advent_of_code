@@ -19,7 +19,7 @@ def diagnostics() -> list[list[int]]:
     00010
     01010"""
 
-    diagnostics = [map(int, list(line.strip())) for line in input.split("\n")]
+    diagnostics = [list(map(int, list(line.strip()))) for line in input.split("\n")]
     return diagnostics
 
 
@@ -27,5 +27,5 @@ def test_pressure(diagnostics) -> None:
     assert get_pressure(diagnostics) == 198
 
 
-def test_lif_support(diagnostics) -> None:
+def test_life_support(diagnostics) -> None:
     assert get_life_support(diagnostics) == 230
