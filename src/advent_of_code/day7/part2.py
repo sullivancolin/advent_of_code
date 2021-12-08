@@ -18,14 +18,11 @@ This costs a total of 168 fuel. This is the new cheapest possible outcome; the o
 
 Determine the horizontal position that the crabs can align to using the least fuel possible so they can make you an escape route! How much fuel must they spend to align to that position?
 """
-import sys
 from functools import cache
 
 import numpy as np
 
 from .part1 import parse_file
-
-sys.setrecursionlimit(10 ** 6)
 
 
 @cache
@@ -46,7 +43,7 @@ def get_actual_least_fuel(positions: list[int]) -> int:
     grid = np.asarray(
         [
             get_actual_costs_for_position(position, max_position)
-            for position in positions
+            for position in sorted(positions)
         ]
     )
 
