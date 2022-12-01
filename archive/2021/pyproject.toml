@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "advent_of_code"
+version = "0.1.0"
+description = ""
+authors = ["Colin Sullivan <csullivan@brandwatch.com>"]
+
+[tool.poetry.dependencies]
+python = "~3.10.0"
+rich = "^10.15.0"
+pandas = "^1.3.4"
+tqdm = "^4.62.3"
+
+[tool.poetry.dev-dependencies]
+black = "^21.11b1"
+isort = "^5.10.1"
+mypy = "^0.910"
+flake8 = "^4.0.1"
+ipdb = "^0.13.9"
+jupyterlab = "^3.2.4"
+pytest-sugar = "^0.9.4"
+pandas-stubs = "^1.2.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
