@@ -1,8 +1,13 @@
 import numpy as np
 import pytest
 
-from advent_of_code.day4.part1 import (check_columns, check_rows, play_bingo,
-                                       remain_sum, update_board_state)
+from advent_of_code.day4.part1 import (
+    check_columns,
+    check_rows,
+    play_bingo,
+    remain_sum,
+    update_board_state,
+)
 from advent_of_code.day4.part2 import lose_bingo
 
 state_boards = [

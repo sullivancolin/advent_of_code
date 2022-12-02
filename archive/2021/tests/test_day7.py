@@ -3,7 +3,7 @@ import sys
 from advent_of_code.day7.part1 import get_least_fuel
 from advent_of_code.day7.part2 import get_actual_least_fuel, triangular_number
 
-sys.setrecursionlimit(10 ** 6)
+sys.setrecursionlimit(10**6)
 
 
 positions = [16, 1, 2, 0, 4, 2, 7, 1, 2, 14]
