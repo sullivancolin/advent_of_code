@@ -5,17 +5,20 @@ In the example above, the top three Elves are the fourth Elf (with 24000 Calorie
 
 Find the top three Elves carrying the most Calories. How many Calories are those Elves carrying in total?
 """
+from functools import partial
 from heapq import nlargest
 
+top_3 = partial(nlargest, 3)
 
-def calculate_top_3_total_calories(inventory_text: str) -> int:
+
+def calculate_top_3_total_calories(all_elf_inventories: str) -> int:
     return sum(
-        nlargest(
-            3,
-            (
-                sum(map(int, sublist.split("\n")))
-                for sublist in inventory_text.split("\n\n")
-            ),
+        top_3(
+            sum(
+                int(calorie_string)
+                for calorie_string in elf_inventory_string.split("\n")
+            )
+            for elf_inventory_string in all_elf_inventories.split("\n\n")
         )
     )
 
