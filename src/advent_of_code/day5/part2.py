@@ -49,7 +49,9 @@ from collections import deque
 from advent_of_code.day5.part1 import parse_moves, parse_stacks
 
 
-def compute_efficient_end_state(stacks: list[deque[str]], moves: list[tuple[int, int, int]]) -> str:
+def compute_efficient_end_state(
+    stacks: list[deque[str]], moves: list[tuple[int, int, int]]
+) -> str:
     for quantity, origin, destination in moves:
         crates = []
         for crate_num in range(quantity):

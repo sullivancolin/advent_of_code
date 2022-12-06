@@ -46,8 +46,8 @@ The Elves just need to know which crate will end up on top of each stack; in thi
 
 After the rearrangement procedure completes, what crate ends up on top of each stack?
 """
-from collections import deque
 import re
+from collections import deque
 
 move_pattern = re.compile(r"(\d+)")
 
@@ -75,7 +75,9 @@ def parse_moves(input_str: str) -> list[tuple[int, int, int]]:
     return moves
 
 
-def compute_end_state(stacks: list[deque[str]], moves: list[tuple[int, int, int]]) -> str:
+def compute_end_state(
+    stacks: list[deque[str]], moves: list[tuple[int, int, int]]
+) -> str:
     for quantity, origin, destination in moves:
         for crate_num in range(quantity):
             crate = stacks[origin - 1].pop()
