@@ -20,51 +20,9 @@ Now, the tail (9) visits 36 positions (including s) at least once:
 
 Simulate your complete series of motions on a larger rope with ten knots. How many positions does the tail of the rope visit at least once?
 """
-
-from typing import Literal
-
 import numpy as np
 
-Direction = Literal["R", "L", "U", "D"]
-
-
-def update_head_position(
-    head_position: tuple[int, int], direction: Direction
-) -> tuple[int, int]:
-    if direction == "R":
-        return (head_position[0], head_position[1] + 1)
-    elif direction == "L":
-        return (head_position[0], head_position[1] - 1)
-    elif direction == "U":
-        return (head_position[0] - 1, head_position[1])
-    else:
-        return (head_position[0] + 1, head_position[1])
-
-
-def update_tail_position(
-    head_position: tuple[int, int], tail_position: tuple[int, int]
-) -> tuple[int, int]:
-    x_direction_diff = head_position[1] - tail_position[1]
-    y_direction_diff = head_position[0] - tail_position[0]
-
-    abs_x = abs(x_direction_diff)
-    abs_y = abs(y_direction_diff)
-    if abs_x < 2 and abs_y < 2:  # check if diagonal, adjacent or on top
-        return tail_position
-    elif abs_y == 0:  # horizontal move
-        return tail_position[0], tail_position[1] + (x_direction_diff // 2)
-    elif abs_x == 0:  # vertical move
-        return tail_position[0] + (y_direction_diff // 2), tail_position[1]
-    else:
-        if x_direction_diff < 0:
-            x_move = -1
-        else:
-            x_move = 1
-        if y_direction_diff < 0:
-            y_move = -1
-        else:
-            y_move = 1
-        return tail_position[0] + y_move, tail_position[1] + x_move
+from advent_of_code.day9.part1 import update_head_position, update_tail_position
 
 
 def num_visited_positions_multi_knots(input_str: str) -> int:
