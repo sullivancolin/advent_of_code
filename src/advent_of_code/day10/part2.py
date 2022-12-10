@@ -30,8 +30,11 @@ import numpy as np
 
 
 def get_pixel_val(sprite_location: np.ndarray, curr_cycle: int) -> str:
+    orig_cycle = curr_cycle
     if curr_cycle > 40:
         curr_cycle = curr_cycle % 40
+        if curr_cycle == 0:
+            curr_cycle = 40
     if any(sprite_location == curr_cycle - 1):
         pixel = "#"
     else:
@@ -59,7 +62,7 @@ def print_screen(input_str: str) -> str:
             pixel_val = get_pixel_val(sprite_location, curr_cycle)
             pixels.append(pixel_val)
             sprite_location += instruction
-    return "".join(pixels)
+    return "".join(pixels).strip()
 
 
 if __name__ == "__main__":
