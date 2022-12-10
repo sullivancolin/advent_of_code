@@ -30,9 +30,6 @@ import numpy as np
 
 
 def get_pixel_val(sprite_location: np.ndarray, curr_cycle: int) -> str:
-    old_cycle = curr_cycle
-    if old_cycle == 175:
-        old_cycle
     if curr_cycle > 40:
         curr_cycle = curr_cycle % 40
     if any(sprite_location == curr_cycle - 1):
