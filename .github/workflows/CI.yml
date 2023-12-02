@@ -11,6 +11,7 @@ jobs:
     name: Code Quality Checks
     runs-on: ubuntu-latest
     steps:
+
       - name: Install poetry
         run: |
           pipx install poetry
@@ -71,7 +72,7 @@ jobs:
 
       - name: Run tests
         run: |
-          coverage run -m pytest --html=test_report.html --self-contained-html
+          poetry run coverage run -m pytest --html=test_report.html --self-contained-html
 
       - name: "Upload Coverage"
         uses: actions/upload-artifact@v3
