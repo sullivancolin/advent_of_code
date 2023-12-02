@@ -1,27 +1,26 @@
-from advent_of_code.day1.part1 import calculate_max_calories
-from advent_of_code.day1.part2 import calculate_top_3_total_calories
+from aoc.day1.part1 import calibration_sum
+from aoc.day1.part2 import word_calibration_sum
 
-toy_data = """1000
-2000
-3000
-
-4000
-
-5000
-6000
-
-7000
-8000
-9000
-
-10000"""
+input_text = """1abc2
+pqr3stu8vwx
+a1b2c3d4e5f
+treb7uchet"""
 
 
-def test_part1() -> None:
-    result = calculate_max_calories(toy_data)
-    assert result == 24000
+def test_day1_part1() -> None:
+    """Test the sum of first and last calibration digits on the toy input."""
+    assert calibration_sum(input_text) == 142
 
 
-def test_part2() -> None:
-    result = calculate_top_3_total_calories(toy_data)
-    assert result == 45000
+part2_input = """two1nine
+eightwothree
+abcone2threexyz
+xtwone3four
+4nineeightseven2
+zoneight234
+7pqrstsixteen"""
+
+
+def test_day1_part2() -> None:
+    """Test the sum of first and last calibration digits spelled as words on the toy input."""
+    assert word_calibration_sum(part2_input) == 281
