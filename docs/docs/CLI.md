@@ -17,12 +17,12 @@ $ aoc [OPTIONS] COMMAND [ARGS]...
 
 **Commands**:
 
-* `day1`: command for running day1 stars
+* `day1`: Command for running day1 stars
 * `debug-version-info`: Print debug information to terminal.
 
 ## `aoc day1`
 
-command for running day1 stars
+Command for running day1 stars
 
 **Usage**:
 
@@ -37,7 +37,7 @@ $ aoc day1 [OPTIONS] COMMAND [ARGS]...
 **Commands**:
 
 * `part1`: Calculate the sum of all the first and...
-* `part2`
+* `part2`: Calculate the sum of all the first and...
 
 ### `aoc day1 part1`
 
@@ -58,6 +58,8 @@ $ aoc day1 part1 [OPTIONS] [INPUT_PATH]
 * `--help`: Show this message and exit.
 
 ### `aoc day1 part2`
+
+Calculate the sum of all the first and last number words or digits on each line concatenated together.
 
 **Usage**:
 
