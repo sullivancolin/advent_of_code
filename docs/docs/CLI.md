@@ -18,6 +18,7 @@ $ aoc [OPTIONS] COMMAND [ARGS]...
 **Commands**:
 
 * `day1`: Command for running day1 stars
+* `day2`: Command for running day2 stars
 * `debug-version-info`: Print debug information to terminal.
 
 ## `aoc day1`
@@ -70,6 +71,42 @@ $ aoc day1 part2 [OPTIONS] [INPUT_PATH]
 **Arguments**:
 
 * `[INPUT_PATH]`: Path to file containing the input  [default: data/day1.txt]
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+## `aoc day2`
+
+Command for running day2 stars
+
+**Usage**:
+
+```console
+$ aoc day2 [OPTIONS] COMMAND [ARGS]...
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+**Commands**:
+
+* `part1`: Calculate the sum of all Game IDs
+
+### `aoc day2 part1`
+
+Calculate the sum of all Game IDs
+
+**Usage**:
+
+```console
+$ aoc day2 part1 [OPTIONS] [INPUT_PATH]
+```
+
+**Arguments**:
+
+* `[INPUT_PATH]`: Path to file containing the input  [default: data/day2.txt]
 
 **Options**:
 

@@ -1,5 +1,5 @@
 """
-# Day 2: Cube Conundrum
+# Cube Conundrum
 
 You're launched high into the atmosphere! The apex of your trajectory just barely reaches the surface of a large island floating in the sky. You gently land in a fluffy pile of leaves. It's quite cold, but you don't see much snow. An Elf runs over to greet you.
 
@@ -13,11 +13,13 @@ You play several games and record the information from each game (your puzzle in
 
 For example, the record of a few games might look like this:
 
+```
 Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
 Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
 Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
 Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
 Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green
+```
 
 In game 1, three sets of cubes are revealed from the bag (and then put back again). The first set is 3 blue cubes and 4 red cubes; the second set is 1 red cube, 2 green cubes, and 6 blue cubes; the third set is only 2 green cubes.
 
@@ -27,33 +29,68 @@ In the example above, games 1, 2, and 5 would have been possible if the bag had 
 
 Determine which games would have been possible if the bag had been loaded with only 12 red cubes, 13 green cubes, and 14 blue cubes. What is the sum of the IDs of those games?
 
-## Solution
+# Solution
 """
 
+import re
 from dataclasses import dataclass
 from typing import Self
+
+id_pattern = re.compile(r"^Game (\d+):")
+
+draw_pattern = re.compile(r"(\d+) (red|green|blue)")
 
 
 @dataclass
 class Draw:
-    r: int
-    g: int
-    b: int
+    """Dataclass for representing a draw during a game"""
 
-    def __gt__(self, other: Self) -> bool:
-        return self.r > other.r or self.g > other.g or self.b > other.b
+    red: int = 0
+    green: int = 0
+    blue: int = 0
+
+    def __lt__(self, other: Self) -> bool:
+        """Compare whether one Draw is less than another Draw"""
+        return (
+            self.red < other.red or self.green < other.green or self.blue < other.blue
+        )
 
 
 max_draw = Draw(12, 13, 14)
 
 
-def valid_game(draws: list[Draw]) -> bool:
-    return all(max_draw > draw for draw in draws)
+def game_is_valid(draws: list[Draw]) -> bool:
+    """Test whether any draws are more than the maximum for each color
+
+    Args:
+        draws: list of draws in the Game
+
+    Returns:
+        True if no draw has a larger color count then the max else False
+    """
+    return not any(max_draw < draw for draw in draws)
 
 
 def sum_valid_game_ids(input_text: str) -> int:
-    games: dict[int, list[Draw]] = {}
+    """Parse each line into Game with id and draws.  If game is valid add ID to cumulative sum.
+
+    Args:
+        input_text: Raw input text.
+
+    Returns:
+        sum of all the valid Game IDs.
+    """
+    lines = input_text.splitlines()
     cum_sum = 0
-    for game_id, draws in games.items():
-        if valid_game(draws):
+    for line in lines:
+        game_id = int(id_pattern.findall(line)[0])
+        draw_strings = line.split(": ")[1].split("; ")
+        draws = []
+        for ds in draw_strings:
+            draws.append(
+                Draw(**{color: int(count) for count, color in draw_pattern.findall(ds)})
+            )
+
+        if game_is_valid(draws):
             cum_sum += game_id
+    return cum_sum

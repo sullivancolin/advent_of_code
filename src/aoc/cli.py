@@ -6,6 +6,8 @@ from rich import print
 
 from aoc.day1.part1 import calibration_sum
 from aoc.day1.part2 import word_calibration_sum
+from aoc.day2.part1 import sum_valid_game_ids
+from aoc.day2.part2 import sum_game_powers
 
 __version__ = version(__package__)
 
@@ -112,6 +114,32 @@ day2app = typer.Typer(
     help="Command for running day2 stars",
     rich_markup_mode="rich",
 )
+
+
+@day2app.command(name="part1")
+def day2part1(
+    input_path: Path = typer.Argument(
+        Path("data/day2.txt"), help="Path to file containing the input"
+    ),
+) -> None:
+    """Calculate the sum of all Game IDs"""
+    with open(input_path) as infile:
+        input_text = infile.read()
+    total_sum = sum_valid_game_ids(input_text)
+    print(f"The sum of the valid game IDs is: [bold red]{total_sum}[/bold red]")
+
+
+@day2app.command(name="part2")
+def day2part2(
+    input_path: Path = typer.Argument(
+        Path("data/day2.txt"), help="Path to file containing the input"
+    ),
+) -> None:
+    """Calculate the sum of all Game Powers"""
+    with open(input_path) as infile:
+        input_text = infile.read()
+    total_sum = sum_game_powers(input_text)
+    print(f"The sum of the game powers is: [bold red]{total_sum}[/bold red]")
 
 
 cli.add_typer(day2app, name="day2")
