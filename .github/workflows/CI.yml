@@ -82,7 +82,7 @@ jobs:
 
       - name: Show Coverage Report
         run: |
-          coverage combine
+          poetry run coverage combine
 
       - name: Create HTML report
         run: |
