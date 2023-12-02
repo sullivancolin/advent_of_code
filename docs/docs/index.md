@@ -1,13 +1,14 @@
-# Advent of Code 2023
+<p align="center">
+  <a href="https://sullivancolin.github.io/advent_of_code/"><img src="https://sullivancolin.github.io/advent_of_code/images/banner.png" alt="aoc"></a>
+</p>
 
 [![CI](https://github.com/sullivancolin/advent_of_code/actions/workflows/CI.yml/badge.svg)](https://github.com/sullivancolin/advent_of_code/actions)
 
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/sullivancolin/advent_of_code)
+
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 
 [![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/sullivancolin/advent-of-code)
-
-My record of current and past attempts at Advent of Code in Python.  (I usually Peter out around the second week as they take more time and I'm spending more time with family.)
 
 ## Installation
 

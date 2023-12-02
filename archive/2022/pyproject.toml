@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "advent-of-code"
+name = "aoc"
 version = "0.1.0"
 description = ""
 authors = ["Colin Sullivan <csullivan@brandwatch.com>"]

@@ -1,4 +1,3 @@
-from unittest.mock import NonCallableMagicMock
 
 from advent_of_code.day6.part1 import fish_after_interval
 

@@ -1,6 +1,5 @@
 import numpy as np
 import pytest
-
 from advent_of_code.day4.part1 import (
     check_columns,
     check_rows,

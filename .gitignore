@@ -8,3 +8,8 @@
 .vscode
 htmlcov
 .DS_Store
+.venv
+.ruff_cache
+.coverage
+*.html
+mypy_report

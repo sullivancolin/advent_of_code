@@ -80,9 +80,9 @@ def update_grid(grid: np.ndarray, p1: Point, p2: Point) -> np.ndarray:
     if p1.x != p2.x and p1.y != p2.y:
         return grid
     if p1.x == p2.x:
-        grid[p1.x, p1.y : p2.y + 1] += 1  # noqa
+        grid[p1.x, p1.y : p2.y + 1] += 1
     else:
-        grid[p1.x : p2.x + 1, p1.y] += 1  # noqa
+        grid[p1.x : p2.x + 1, p1.y] += 1
     return grid
 
 
