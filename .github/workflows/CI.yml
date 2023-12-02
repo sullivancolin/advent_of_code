@@ -83,10 +83,10 @@ jobs:
       - name: Show Coverage Report
         run: |
           poetry run coverage combine
+          poetry run coverage report
 
       - name: Create HTML report
         run: |
-          poetry run coverage combine
           poetry run coverage html
 
       - name: Upload HTML report
