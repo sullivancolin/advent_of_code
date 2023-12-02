@@ -106,3 +106,12 @@ def day1part2(
 
 
 cli.add_typer(day1app, name="day1")
+
+
+day2app = typer.Typer(
+    help="Command for running day2 stars",
+    rich_markup_mode="rich",
+)
+
+
+cli.add_typer(day2app, name="day2")
