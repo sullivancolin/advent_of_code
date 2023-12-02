@@ -70,7 +70,7 @@ def debug_version_info() -> None:
 
 
 day1app = typer.Typer(
-    help="command for running day1 stars",
+    help="Command for running day1 stars",
     rich_markup_mode="rich",
 )
 
@@ -96,6 +96,7 @@ def day1part2(
         Path("data/day1.txt"), help="Path to file containing the input"
     ),
 ) -> None:
+    """Calculate the sum of all the first and last number words or digits on each line concatenated together."""
     with open(input_path) as infile:
         input_text = infile.read()
     total_sum = word_calibration_sum(input_text)

@@ -5,7 +5,7 @@ repo_name: aoc
 
 edit_uri: ""
 nav:
-  - Getting Started: index.md
+  - Home: index.md
   - CLI: CLI.md
   - Day 1:
     - Part 1: day1/part1.md
