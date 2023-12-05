@@ -8,6 +8,8 @@ from aoc.day1.part1 import calibration_sum
 from aoc.day1.part2 import word_calibration_sum
 from aoc.day2.part1 import sum_valid_game_ids
 from aoc.day2.part2 import sum_game_powers
+from aoc.day3.part1 import sum_part_numbers
+from aoc.day3.part2 import sum_gear_ratios
 
 __version__ = version(__package__)
 
@@ -143,3 +145,37 @@ def day2part2(
 
 
 cli.add_typer(day2app, name="day2")
+
+day3app = typer.Typer(
+    help="Command for running day3 stars",
+    rich_markup_mode="rich",
+)
+
+
+@day3app.command(name="part1")
+def day3part1(
+    input_path: Path = typer.Argument(
+        Path("data/day3.txt"), help="Path to file containing the input"
+    ),
+) -> None:
+    """Calculate the sum of engine parts."""
+    with open(input_path) as infile:
+        input_text = infile.read()
+    total_sum = sum_part_numbers(input_text)
+    print(f"The sum of the engine parts is: [bold red]{total_sum}[/bold red]")
+
+
+@day3app.command(name="part2")
+def day3part2(
+    input_path: Path = typer.Argument(
+        Path("data/day3.txt"), help="Path to file containing the input"
+    ),
+) -> None:
+    """Calculate the sum of all gears"""
+    with open(input_path) as infile:
+        input_text = infile.read()
+    total_sum = sum_gear_ratios(input_text)
+    print(f"The sum of the gear ratios is: [bold red]{total_sum}[/bold red]")
+
+
+cli.add_typer(day3app, name="day3")
