@@ -19,6 +19,7 @@ $ aoc [OPTIONS] COMMAND [ARGS]...
 
 * `day1`: Command for running day1 stars
 * `day2`: Command for running day2 stars
+* `day3`: Command for running day3 stars
 * `debug-version-info`: Print debug information to terminal.
 
 ## `aoc day1`
@@ -93,6 +94,7 @@ $ aoc day2 [OPTIONS] COMMAND [ARGS]...
 **Commands**:
 
 * `part1`: Calculate the sum of all Game IDs
+* `part2`: Calculate the sum of all Game Powers
 
 ### `aoc day2 part1`
 
@@ -107,6 +109,60 @@ $ aoc day2 part1 [OPTIONS] [INPUT_PATH]
 **Arguments**:
 
 * `[INPUT_PATH]`: Path to file containing the input  [default: data/day2.txt]
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+### `aoc day2 part2`
+
+Calculate the sum of all Game Powers
+
+**Usage**:
+
+```console
+$ aoc day2 part2 [OPTIONS] [INPUT_PATH]
+```
+
+**Arguments**:
+
+* `[INPUT_PATH]`: Path to file containing the input  [default: data/day2.txt]
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+## `aoc day3`
+
+Command for running day3 stars
+
+**Usage**:
+
+```console
+$ aoc day3 [OPTIONS] COMMAND [ARGS]...
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+**Commands**:
+
+* `part1`: Calculate the sum of engine parts.
+
+### `aoc day3 part1`
+
+Calculate the sum of engine parts.
+
+**Usage**:
+
+```console
+$ aoc day3 part1 [OPTIONS] [INPUT_PATH]
+```
+
+**Arguments**:
+
+* `[INPUT_PATH]`: Path to file containing the input  [default: data/day3.txt]
 
 **Options**:
 
