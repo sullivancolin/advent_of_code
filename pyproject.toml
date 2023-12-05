@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aoc"
-version = "0.3.0"
+version = "0.4.0"
 description = "Record of current and past attempts at Advent-of-Code in Python"
 authors = ["Colin Sullivan <csullivan@brandwatch.com>"]
 readme = "README.md"

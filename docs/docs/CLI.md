@@ -20,6 +20,7 @@ $ aoc [OPTIONS] COMMAND [ARGS]...
 * `day1`: Command for running day1 stars
 * `day2`: Command for running day2 stars
 * `day3`: Command for running day3 stars
+* `day4`: Command for running day4 stars
 * `debug-version-info`: Print debug information to terminal.
 
 ## `aoc day1`
@@ -149,6 +150,7 @@ $ aoc day3 [OPTIONS] COMMAND [ARGS]...
 **Commands**:
 
 * `part1`: Calculate the sum of engine parts.
+* `part2`: Calculate the sum of all gears
 
 ### `aoc day3 part1`
 
@@ -163,6 +165,79 @@ $ aoc day3 part1 [OPTIONS] [INPUT_PATH]
 **Arguments**:
 
 * `[INPUT_PATH]`: Path to file containing the input  [default: data/day3.txt]
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+### `aoc day3 part2`
+
+Calculate the sum of all gears
+
+**Usage**:
+
+```console
+$ aoc day3 part2 [OPTIONS] [INPUT_PATH]
+```
+
+**Arguments**:
+
+* `[INPUT_PATH]`: Path to file containing the input  [default: data/day3.txt]
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+## `aoc day4`
+
+Command for running day4 stars
+
+**Usage**:
+
+```console
+$ aoc day4 [OPTIONS] COMMAND [ARGS]...
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+**Commands**:
+
+* `part1`: Calculate the sum of all the scratch card...
+* `part2`: Count the total number of scratch cards
+
+### `aoc day4 part1`
+
+Calculate the sum of all the scratch card scores
+
+**Usage**:
+
+```console
+$ aoc day4 part1 [OPTIONS] [INPUT_PATH]
+```
+
+**Arguments**:
+
+* `[INPUT_PATH]`: Path to file containing the input  [default: data/day4.txt]
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+### `aoc day4 part2`
+
+Count the total number of scratch cards
+
+**Usage**:
+
+```console
+$ aoc day4 part2 [OPTIONS] [INPUT_PATH]
+```
+
+**Arguments**:
+
+* `[INPUT_PATH]`: Path to file containing the input  [default: data/day4.txt]
 
 **Options**:
 
