@@ -204,7 +204,26 @@ $ aoc day4 [OPTIONS] COMMAND [ARGS]...
 
 **Commands**:
 
+* `part1`: Calculate the sum of all the scratch card...
 * `part2`: Count the total number of scratch cards
+
+### `aoc day4 part1`
+
+Calculate the sum of all the scratch card scores
+
+**Usage**:
+
+```console
+$ aoc day4 part1 [OPTIONS] [INPUT_PATH]
+```
+
+**Arguments**:
+
+* `[INPUT_PATH]`: Path to file containing the input  [default: data/day4.txt]
+
+**Options**:
+
+* `--help`: Show this message and exit.
 
 ### `aoc day4 part2`
 

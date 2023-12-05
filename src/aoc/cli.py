@@ -188,6 +188,12 @@ day4app = typer.Typer(
 )
 
 
+day4app = typer.Typer(
+    help="Command for running day4 stars",
+    rich_markup_mode="rich",
+)
+
+
 @day4app.command(name="part1")
 def day4part1(
     input_path: Path = typer.Argument(
@@ -199,12 +205,6 @@ def day4part1(
         input_text = infile.read()
     total_sum = card_points(input_text)
     print(f"The sum of card scores is: [bold red]{total_sum}[/bold red]")
-
-
-day4app = typer.Typer(
-    help="Command for running day4 stars",
-    rich_markup_mode="rich",
-)
 
 
 @day4app.command(name="part2")
