@@ -13,6 +13,9 @@ nav:
   - Day 2:
     - Part 1: day2/part1.md
     - Part 2: day2/part2.md
+  - Day 4:
+    - Part 1: day4/part1.md
+    - Part 2: day4/part2.md
 
 theme:
   name: "material"

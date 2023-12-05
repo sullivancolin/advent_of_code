@@ -8,6 +8,8 @@ from aoc.day1.part1 import calibration_sum
 from aoc.day1.part2 import word_calibration_sum
 from aoc.day2.part1 import sum_valid_game_ids
 from aoc.day2.part2 import sum_game_powers
+from aoc.day4.part1 import card_points
+from aoc.day4.part2 import count_cards
 
 __version__ = version(__package__)
 
@@ -143,3 +145,37 @@ def day2part2(
 
 
 cli.add_typer(day2app, name="day2")
+
+day4app = typer.Typer(
+    help="Command for running day4 stars",
+    rich_markup_mode="rich",
+)
+
+
+@day4app.command(name="part1")
+def day4part1(
+    input_path: Path = typer.Argument(
+        Path("data/day4.txt"), help="Path to file containing the input"
+    ),
+) -> None:
+    """Calculate the sum of all the scratch card scores"""
+    with open(input_path) as infile:
+        input_text = infile.read()
+    total_sum = card_points(input_text)
+    print(f"The sum of card scores is: [bold red]{total_sum}[/bold red]")
+
+
+@day4app.command(name="part2")
+def day4part2(
+    input_path: Path = typer.Argument(
+        Path("data/day4.txt"), help="Path to file containing the input"
+    ),
+) -> None:
+    """Count the total number of scratch cards"""
+    with open(input_path) as infile:
+        input_text = infile.read()
+    total_sum = count_cards(input_text)
+    print(f"The final number of scratch cards is: [bold red]{total_sum}[/bold red]")
+
+
+cli.add_typer(day4app, name="day4")

@@ -19,6 +19,7 @@ $ aoc [OPTIONS] COMMAND [ARGS]...
 
 * `day1`: Command for running day1 stars
 * `day2`: Command for running day2 stars
+* `day4`: Command for running day4 stars
 * `debug-version-info`: Print debug information to terminal.
 
 ## `aoc day1`
@@ -93,6 +94,7 @@ $ aoc day2 [OPTIONS] COMMAND [ARGS]...
 **Commands**:
 
 * `part1`: Calculate the sum of all Game IDs
+* `part2`: Calculate the sum of all Game Powers
 
 ### `aoc day2 part1`
 
@@ -107,6 +109,79 @@ $ aoc day2 part1 [OPTIONS] [INPUT_PATH]
 **Arguments**:
 
 * `[INPUT_PATH]`: Path to file containing the input  [default: data/day2.txt]
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+### `aoc day2 part2`
+
+Calculate the sum of all Game Powers
+
+**Usage**:
+
+```console
+$ aoc day2 part2 [OPTIONS] [INPUT_PATH]
+```
+
+**Arguments**:
+
+* `[INPUT_PATH]`: Path to file containing the input  [default: data/day2.txt]
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+## `aoc day4`
+
+Command for running day4 stars
+
+**Usage**:
+
+```console
+$ aoc day4 [OPTIONS] COMMAND [ARGS]...
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+**Commands**:
+
+* `part1`: Calculate the sum of all the scratch card...
+* `part2`: Count the total number of scratch cards
+
+### `aoc day4 part1`
+
+Calculate the sum of all the scratch card scores
+
+**Usage**:
+
+```console
+$ aoc day4 part1 [OPTIONS] [INPUT_PATH]
+```
+
+**Arguments**:
+
+* `[INPUT_PATH]`: Path to file containing the input  [default: data/day4.txt]
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+### `aoc day4 part2`
+
+Count the total number of scratch cards
+
+**Usage**:
+
+```console
+$ aoc day4 part2 [OPTIONS] [INPUT_PATH]
+```
+
+**Arguments**:
+
+* `[INPUT_PATH]`: Path to file containing the input  [default: data/day4.txt]
 
 **Options**:
 
