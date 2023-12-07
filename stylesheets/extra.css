@@ -1,0 +1,59 @@
+
+/* .md-typeset h3 {
+    font-weight: 700;
+}
+
+.md-typeset h4 {
+    font-weight: 400
+} */
+
+[data-md-color-scheme="brandwatch_light"] {
+  --md-primary-fg-color:        #ffbe0a;
+  --md-primary-fg-color--light: #f7c334;
+  --md-primary-fg-color--dark:  #ffbe0a;
+  --md-accent-fg-color:        #A98bbc;
+  --md-accent-fg-color--light: #cba8e0;
+  --md-accent-fg-color--dark:  #754c8f;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #A98bbc;
+  --md-primary-fg-color--light: #cba8e0;
+  --md-primary-fg-color--dark:  #754c8f;
+  --md-accent-fg-color:         #ffbe0a;
+  --md-accent-fg-color--light: #f7c334;
+  --md-accent-fg-color--dark:  #ffbe0a;
+  --md-hue: 210;
+}
+
+
+
+.md-nav__item .md-nav__link--active {
+      color: var(--md-accent-fg-color);
+}
+
+.md-nav__item .md-nav__link--active:hover {
+      color: var(--md-primary-fg-color);
+}
+
+
+.md-nav__link:hover {
+      color: var(--md-primary-fg-color);
+}
+
+:root > * {
+  --md-code-hl-string-color: #d19a02;
+}
+
+
+.md-logo {
+    filter: drop-shadow(2px 2px 4px black);
+}
+
+.md-typeset a {
+    color: var(--md-accent-fg-color);
+}
+
+.md-typeset a:hover {
+    color: var(--md-primary-fg-color);
+}
