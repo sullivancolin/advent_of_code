@@ -21,6 +21,7 @@ $ aoc [OPTIONS] COMMAND [ARGS]...
 * `day2`: Command for running day2 stars
 * `day3`: Command for running day3 stars
 * `day4`: Command for running day4 stars
+* `day5`: Command for running day5 stars
 * `debug-version-info`: Print debug information to terminal.
 
 ## `aoc day1`
@@ -238,6 +239,42 @@ $ aoc day4 part2 [OPTIONS] [INPUT_PATH]
 **Arguments**:
 
 * `[INPUT_PATH]`: Path to file containing the input  [default: data/day4.txt]
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+## `aoc day5`
+
+Command for running day5 stars
+
+**Usage**:
+
+```console
+$ aoc day5 [OPTIONS] COMMAND [ARGS]...
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+**Commands**:
+
+* `part1`: Calculate the nearest location for planting.
+
+### `aoc day5 part1`
+
+Calculate the nearest location for planting.
+
+**Usage**:
+
+```console
+$ aoc day5 part1 [OPTIONS] [INPUT_PATH]
+```
+
+**Arguments**:
+
+* `[INPUT_PATH]`: Path to file containing the input  [default: data/day5.txt]
 
 **Options**:
 

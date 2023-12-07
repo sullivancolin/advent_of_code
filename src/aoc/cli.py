@@ -12,6 +12,7 @@ from aoc.day3.part1 import sum_part_numbers
 from aoc.day3.part2 import sum_gear_ratios
 from aoc.day4.part1 import card_points
 from aoc.day4.part2 import count_cards
+from aoc.day5.part1 import nearest_location
 
 __version__ = version(__package__)
 
@@ -221,3 +222,24 @@ def day4part2(
 
 
 cli.add_typer(day4app, name="day4")
+
+day5app = typer.Typer(
+    help="Command for running day5 stars",
+    rich_markup_mode="rich",
+)
+
+
+@day5app.command(name="part1")
+def day5part1(
+    input_path: Path = typer.Argument(
+        Path("data/day5.txt"), help="Path to file containing the input"
+    ),
+) -> None:
+    """Calculate the nearest location for planting."""
+    with open(input_path) as infile:
+        input_text = infile.read()
+    total_sum = nearest_location(input_text)
+    print(f"The nearest location is: [bold red]{total_sum}[/bold red]")
+
+
+cli.add_typer(day5app, name="day5")
